@@ -12,7 +12,8 @@ set(CMAKE_CXX_STANDARD 14)
 ExternalProject_Add(
     googletest
     GIT_REPOSITORY git@github.com:google/googletest.git
-    GIT_TAG release-1.12.1
+    GIT_TAG main
+    GIT_REMOTE_NAME origin
     SOURCE_DIR ${ROOT_DIR}/thirdparty/googletest
     BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/thirdparty/googletest
     CMAKE_ARGS -DBuildShared=ON -DBuildExamples=OFF -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/lib/googletest 
